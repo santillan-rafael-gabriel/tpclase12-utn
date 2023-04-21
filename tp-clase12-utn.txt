@@ -1,0 +1,57 @@
+Trabajo Practico clase 12
+Alumno: Santillan Rafael Gabriel
+Dias y Horarios: martes y jueves de 19hs a 21hs
+Repositorio:https://github.com/santillan-rafael-gabriel/tpclase12-utn.git
+
+
+punto 1
+primero insertamos los datos de los departamentos
+
+insert into departamento(DepNro,DepNom,DepPres) values ('1','Logistica','15000');
+insert into departamento(DepNro,DepNom,DepPres) values ('2','RRHH','20000');
+insert into departamento(DepNro,DepNom,DepPres) values ('3','Sistemas','25000');
+insert into departamento(DepNro,DepNom,DepPres) values ('4','Legal','20000');
+insert into departamento(DepNro,DepNom,DepPres) values ('5','ventas','15000');
+insert into departamento(DepNro,DepNom,DepPres) values ('6','Compras','18000');
+insert into departamento(DepNro,DepNom,DepPres) values ('7','Seguridad','15000');
+
+luego de completar y cargar los datos de departamentos ahora si vamos a poder registrar a las personas con su departamento correspondientes
+
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('11','Sanchez','Raul','Argentino','1');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('2','Rodriguez','Paolo','Brazileño','5');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('14','Edwin','Oscar','Bolivia','6');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('50','Gimenez','Susana','Italiana','2');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('113','Scherwich','yaohni','Canada','1');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('20','usuny','yokio','Japon','3');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('22','nikki','taio','China','3');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('6','arnol','george','Alaska','5');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('9','Perez','johanatan','Chile','1');
+insert into empleado(EmpDni,EmpApe,EmpNom,EmpNac,EmpDepto) values ('4','Espindola','Rodolfo','Argentino','4');
+
+-----------------------------------------------------------------------
+punto 2
+Para modificar la nacionalidad de un empleado se tiene que usar el update
+
+update empleado set EmpNac = 'Cuba' where EmpDni=9;
+
+-------------------------------------------------------------------------
+punto 3
+para eliminar una tabla hay que usar el delete
+antes de eliminar el departamento tiene que fijarse que no tenga integrantes registrados
+
+delete from departamento where DepNro=7;
+
+-------------------------------------------------
+punto 4
+Para mostrar los empleados que trabajan en el departamento de logistica hay que poner el siguiente comando
+
+select * from empleado where EmpDepto=1;
+
+---------------------------
+punto 5
+para mostrar todos los departamentos ordenados alfabeticamente.
+
+select * from departamento
+order by DepNom;
+
+
